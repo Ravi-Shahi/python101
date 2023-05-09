@@ -54,9 +54,9 @@ print(my_girl_likes[6:10]) # extract word of index 6-9 i.e. _lik
 another_string = "xyz and zyx in some some thing you got"
 gives_bool_val = 'xyz' in another_string
 this_will_also = 'ananya' in another_string
-neg_this_will_also = 'ananya' not in another_string  
+neg_this_will_also = 'ananya' not in another_string
 print('gives_bool_val',gives_bool_val) # gives true
-print('this_will_also:',this_will_also) # gives false 
+print('this_will_also:',this_will_also) # gives false
 print('neg_this_will_also: ',neg_this_will_also) # gives true when not found
 print('yz' in another_string) # gives true
 
