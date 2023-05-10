@@ -19,6 +19,12 @@ split()
 splitlines()
 join()
 
+isnumeric()
+isspace()
+isdigit()
+isalpha()
+isalnum()
+
 '''
 
 sample_string = "This string is to be used by every method that requires sample. Feel free to call it"
@@ -181,3 +187,68 @@ print('used list, delimiter "--":',list_join)
 
 easy_join_string = ' '.join("givemespace")
 print(easy_join_string)
+
+# isdigit()
+'''
+gives true if string os numbers, false other wise
+'''
+
+string_one = "1234"
+print("string_one:", string_one)
+string_two = "Ananya123"
+print("string_two:",string_two)
+string_three = "69.0"
+print("string_three:",string_three) #contains decimal, which is not considered a digit
+string_four = "0000111192374"
+print("string_four:",string_four)
+
+# isnumeric()
+'''
+gives true if string is number,superscript,superscript, fraction, roman numerals , false other wise
+
+Basically it returns True to all the characters that have the unicode numeric value property
+'''
+
+string1 = "12345"
+print(string1.isnumeric())  # Output: True
+
+string2 = "½" # unicode escape sequence '\u00BD'
+print(string2.isnumeric())  # Output: True
+
+string3 = "10²" # unicode escape sequence '10\u00B2'
+print(string3.isnumeric())  # Output: True
+
+
+# isalpha()
+'''
+return true if given string literal are alphabetic, otherwise returns False
+'''
+string1 = "Hello"
+print('string1 :',string1.isalpha())  # Output: True
+
+string2 = "Hello123"
+print('string2 :',string2.isalpha())  # Output: False
+
+string3 = "42"
+print('string3 :',string3.isalpha())  # Output: False
+
+string4 = "Python"
+print('string4 :',string4.isalpha())  # Output: True
+
+# isalnum()
+'''
+combine isdigit() and isalpha() with logical or condition you get isalnum()
+
+returns True if given literal are numeric or alphabets 
+'''
+string1 = "Hello123"
+print('string1 :',string1.isalnum())  # Output: True
+
+string2 = "Hello 123"
+print('string2 :',string2.isalnum())  # Output: False
+
+string3 = "42"
+print('string3 :',string3.isalnum())  # Output: True
+
+string4 = "Python!"
+print('string4 :',string4.isalnum())  # Output: False
