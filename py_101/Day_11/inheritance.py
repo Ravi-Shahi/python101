@@ -36,8 +36,8 @@ class client(login):
         super().authenticate(client_user, client_pass) # super() is used to call methods of base class
 
 ravi = client("ravindar","123")
+
 ravi.login()
 
-
-
+ravi.authenticate('ravindar','123') # Inheritance helps you write DRY code!
 
