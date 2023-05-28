@@ -1,24 +1,43 @@
-# Parent class
-class Animal:
-    def __init__(self, name):
-        self.name = name
+'''
+when a class inherits the attributes and methods of another class, the process is called Inheritance.
+The class which inherits the properties of another class is called "Child class" or "derived class" or "sub class"
 
-    def speak(self):
-        raise NotImplementedError("Subclass must implement abstract method")
+The class from which it iinherits is called "Parent class" or "Base class" or "super class"
 
-# Child classes inheriting from Animal
-class Dog(Animal):
-    def speak(self):
-        return "Woof!"
+syntax:
 
-class Cat(Animal):
-    def speak(self):
-        return "Meow!"
+class BaseClass:
+    #attributes
+    #methods()
+    ....
 
-# Create instances of the child classes
-dog = Dog("Buddy")
-cat = Cat("Whiskers")
+class ChildClass(BaseClass):
+    #derived class attributes
+    # methods
+'''
 
-# Call the speak() method on the instances
-print(dog.name + ": " + dog.speak())  # Output: Buddy: Woof!
-print(cat.name + ": " + cat.speak())  # Output: Whiskers: Meow!
+#base class
+class login:
+    def __init__(self,user,password):
+        self.user = user
+        self.password = password
+    
+    def authenticate(self, user, password):
+        if self.user == user and self.password == password:
+            print('Authenticated!')
+        else:
+            print('Unknown User!')
+
+#derived class
+class client(login):
+    def login(self):
+        client_user = input('Enter your username\n')
+        client_pass = input('Enter you password \n')
+        super().authenticate(client_user, client_pass) # super() is used to call methods of base class
+
+ravi = client("ravindar","123")
+ravi.login()
+
+
+
+
